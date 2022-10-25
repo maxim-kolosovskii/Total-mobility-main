@@ -15,7 +15,7 @@ Form elements
     //max-width: 50vw;
   }
   @include media-laptop-mn {
-    max-width: 560px;
+    max-width: 542px;
   }
 }
 
@@ -46,6 +46,7 @@ fieldset {
 
 .form__group-half {
   display: flex;
+  line-height: 1.25;
 
   @include media-phone-phablet {
     width: calc(50% - 3px);
@@ -53,6 +54,9 @@ fieldset {
   //@include media-netbook-mn {
   @include media-phablet-mn {
     width: calc(50% - 6px);
+  }
+  @include media-netbook-mn {
+    width: calc(50% - 11px);
   }
 }
 
@@ -73,12 +77,12 @@ fieldset {
   transition: all $transition-duration-fast $transition-timing-function;
 
   @include media-phablet-mx {
-    padding-right: .5rem;
+    padding-right: .15rem;
     padding-left: .5rem;
     transform: translateY(2.2rem);
   }
   @include media-phablet-mn {
-    padding-right: 1rem;
+    padding-right: .5rem;
     padding-left: 1rem;
     transform: translateY(1.95rem);
   }
@@ -97,7 +101,7 @@ textarea {
   font-size: 0.875rem; //14px
   font-weight: $font-weight-medium;
   outline: none;
-  padding: 1.3rem 1rem .4rem;
+  padding: 1.3rem 1rem .35rem;
   width: 100%;
 
   &:focus,
@@ -154,8 +158,17 @@ input[type="checkbox"] {
 
   & > span {
     color: #545252;
-    //font-size: 0.938rem; //15px;
-    font-size: 0.875rem; //14px;
+    font-size: 0.938rem; //15px;
+
+    @include media-phablet-mx {
+      br {
+        display: none;
+      }
+    }
+    @include media-phablet-mn {
+      white-space: nowrap;
+
+    }
   }
 }
 .form__radio {

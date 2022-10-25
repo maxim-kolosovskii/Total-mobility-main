@@ -104,7 +104,7 @@ General Landing styles
       margin: auto;
     }
     @include media-laptop-mn {
-      max-width: calc(50% - 40px);
+      max-width: calc(50% - 20px);
     }
 
     // Animation
@@ -173,7 +173,7 @@ General Landing styles
     }
   }
   .icon-block ul {
-    margin: 5vh auto 0;
+    margin: 7vh auto 0;
     transition: all $transition-duration $transition-timing-function;
 
     @include media-laptop-mx {
@@ -195,7 +195,9 @@ General Landing styles
     @include media-laptop-mn {
       display: grid;
       grid-template-columns: repeat(9, 106px);
-      gap: 2vw;
+      gap: 2.5vw;
+      justify-content: space-between;
+      padding-left: 9px;
     }
   }
   .icon-block__item {
@@ -328,8 +330,9 @@ General Landing styles
   }
   @include media-laptop-mn {
     border-radius: 58px 0 0 58px;
-    padding: 45px 70px 40px 70px;
-    width: calc(50vw - 33px);
+    //padding: 45px 70px 40px;
+    padding: 53px 57px 40px 75px;
+    width: calc(50vw - 47px);
   }
 
   // Animation

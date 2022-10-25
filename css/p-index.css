@@ -114,7 +114,7 @@ General Landing styles
         margin: auto; } }
     @media screen and (min-width: 1400px) {
       .section--top .content-left {
-        max-width: calc(50% - 40px); } }
+        max-width: calc(50% - 20px); } }
 @-webkit-keyframes scaleOut {
   0% {
     opacity: 0;
@@ -178,7 +178,7 @@ General Landing styles
     opacity: 1;
     transform: translateY(0); } }
   .section--top .icon-block ul {
-    margin: 5vh auto 0;
+    margin: 7vh auto 0;
     transition: all 0.3s cubic-bezier(0.25, 0.45, 0.45, 0.95); }
     @media screen and (max-width: 1399px) {
       .section--top .icon-block ul {
@@ -200,7 +200,9 @@ General Landing styles
       .section--top .icon-block ul {
         display: grid;
         grid-template-columns: repeat(9, 106px);
-        gap: 2vw; } }
+        gap: 2.5vw;
+        justify-content: space-between;
+        padding-left: 9px; } }
   .section--top .icon-block__item {
     color: #074C51;
     display: grid;
@@ -304,8 +306,8 @@ General Landing styles
   @media screen and (min-width: 1400px) {
     .content-right {
       border-radius: 58px 0 0 58px;
-      padding: 45px 70px 40px 70px;
-      width: calc(50vw - 33px); } }
+      padding: 53px 57px 40px 75px;
+      width: calc(50vw - 47px); } }
 @-webkit-keyframes slideRightOpacity {
   0% {
     opacity: 0;

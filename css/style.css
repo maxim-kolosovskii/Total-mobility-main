@@ -248,7 +248,7 @@ Form elements
       margin: 0 auto; } }
   @media screen and (min-width: 1400px) {
     .form {
-      max-width: 560px; } }
+      max-width: 542px; } }
 
 fieldset {
   border: 0;
@@ -270,13 +270,17 @@ fieldset {
     display: inline-block; } }
 
 .form__group-half {
-  display: flex; }
+  display: flex;
+  line-height: 1.25; }
   @media screen and (min-width: 576px) and (max-width: 767px) {
     .form__group-half {
       width: calc(50% - 3px); } }
   @media screen and (min-width: 768px) {
     .form__group-half {
       width: calc(50% - 6px); } }
+  @media screen and (min-width: 1200px) {
+    .form__group-half {
+      width: calc(50% - 11px); } }
 
 .form__group-select .form__control {
   background: url("../img/i-arrow-min.svg") 95% 50% no-repeat; }
@@ -291,12 +295,12 @@ fieldset {
   transition: all 0.15s cubic-bezier(0.25, 0.45, 0.45, 0.95); }
   @media screen and (max-width: 767px) {
     .form__label {
-      padding-right: .5rem;
+      padding-right: .15rem;
       padding-left: .5rem;
       transform: translateY(2.2rem); } }
   @media screen and (min-width: 768px) {
     .form__label {
-      padding-right: 1rem;
+      padding-right: .5rem;
       padding-left: 1rem;
       transform: translateY(1.95rem); } }
 
@@ -313,7 +317,7 @@ textarea {
   font-size: 0.875rem;
   font-weight: 500;
   outline: none;
-  padding: 1.3rem 1rem .4rem;
+  padding: 1.3rem 1rem .35rem;
   width: 100%; }
   .form__group input:focus, .form__group input:not(:placeholder-shown),
   .form__control:focus,
@@ -359,7 +363,13 @@ input[type="checkbox"] {
   margin: 15px 0 0; }
   .form__group-radio > span {
     color: #545252;
-    font-size: 0.875rem; }
+    font-size: 0.938rem; }
+    @media screen and (max-width: 767px) {
+      .form__group-radio > span br {
+        display: none; } }
+    @media screen and (min-width: 768px) {
+      .form__group-radio > span {
+        white-space: nowrap; } }
 
 .form__radio {
   cursor: pointer;

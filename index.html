@@ -11,6 +11,7 @@
 	<link rel=profile href=http://microformats.org/profile/hcard>
 
 	<!-- Favicon -->
+<!--	<link rel=icon href=favicon/favicon.png type=image/png>-->
 	<link rel=apple-touch-icon sizes=180x180 href=favicon/apple-touch-icon.png>
 	<link rel=icon type=image/png sizes=32x32 href=favicon/favicon-32x32.png>
 	<link rel=icon type=image/png sizes=16x16 href=favicon/favicon-16x16.png>
@@ -47,78 +48,78 @@
 					<a href="#">
 						<picture>
 							<source srcset=img/top-img-min.jpg media="(min-width: 500px)">
-							<img src=img/top-img-m-min.jpg alt="Découvrir les avantages de la carte">
+							<img id="videoPlaceholder" src=img/top-img-m-min.jpg alt="Découvrir les avantages de la carte">
 						</picture>
 					</a>
 				</div>
 			</div>
 
-<!--			<div class=container>-->
-			<div class="container content-right">
-				<h1 class=page-title>Votre demande de devis en moins d’une minute</h1>
-				<form method=post id=main-form class=form>
-					<fieldset class=form__group-half-outer>
-						<div class="form__group-reverse form__group-half">
-							<input class=form__control id=form-nom type=text name=lastname placeholder="" required>
-							<label class=form__label for=form-nom>Votre nom<sup>*</sup></label>
-						</div>
-						<div class="form__group-reverse form__group-half">
-							<input class=form__control id=form-prenom type=text name=firstname placeholder="" required>
-							<label class=form__label for=form-prenom>Votre prénom<sup>*</sup></label>
-						</div>
-					</fieldset>
+			<div class=container>
+				<div class=content-right>
+					<h1 class=page-title>Votre demande de devis en moins d’une minute</h1>
+					<form method=post id=main-form class=form>
+						<fieldset class=form__group-half-outer>
+							<div class="form__group-reverse form__group-half">
+								<input class=form__control id=form-nom type=text name=lastname placeholder="" required>
+								<label class=form__label for=form-nom>Votre nom<sup>*</sup></label>
+							</div>
+							<div class="form__group-reverse form__group-half">
+								<input class=form__control id=form-prenom type=text name=firstname placeholder="" required>
+								<label class=form__label for=form-prenom>Votre prénom<sup>*</sup></label>
+							</div>
+						</fieldset>
 
-					<fieldset class=form__group-half-outer>
-						<div class="form__group-reverse form__group-half">
-							<input class=form__control id=form-corporate type=text name="corporate_name" placeholder="" required>
-							<label class=form__label for=form-corporate>Nom de l’entreprise<sup>*</sup></label>
-						</div>
-						<div class="form__group-reverse form__group-half">
-							<input class="form__control" id=form-email type=email name=email placeholder="" required>
-							<label class=form__label for=form-email>Email<sup>*</sup></label>
-						</div>
-					</fieldset>
+						<fieldset class=form__group-half-outer>
+							<div class="form__group-reverse form__group-half">
+								<input class=form__control id=form-corporate type=text name="corporate_name" placeholder="" required>
+								<label class=form__label for=form-corporate>Nom de l’entreprise<sup>*</sup></label>
+							</div>
+							<div class="form__group-reverse form__group-half">
+								<input class="form__control" id=form-email type=email name=email placeholder="" required>
+								<label class=form__label for=form-email>Email<sup>*</sup></label>
+							</div>
+						</fieldset>
 
-					<fieldset class=form__group-half-outer>
-						<div class="form__group-reverse form__group-half">
-							<input class=form__control id=form-zip type=text name=address_zip_code placeholder="" required>
-							<label class=form__label for=form-zip>Code postal<sup>*</sup></label>
-						</div>
-						<div class="form__group-reverse form__group-half">
-							<input class=form__control id=form-siret type=text name=siret_number placeholder="" required>
-							<label class=form__label for=form-siret>SIRET<sup>*</sup></label>
-						</div>
-					</fieldset>
+						<fieldset class=form__group-half-outer>
+							<div class="form__group-reverse form__group-half">
+								<input class=form__control id=form-zip type=text name=address_zip_code placeholder="" required>
+								<label class=form__label for=form-zip>Code postal<sup>*</sup></label>
+							</div>
+							<div class="form__group-reverse form__group-half">
+								<input class=form__control id=form-siret type=text name=siret_number placeholder="" required>
+								<label class=form__label for=form-siret>SIRET<sup>*</sup></label>
+							</div>
+						</fieldset>
 
-					<fieldset class=form__group-half-outer>
-						<div class="form__group-reverse form__group-half">
-							<input class=form__control id=form-vehicle type=text name=vehicle placeholder="" required>
-							<label class=form__label for=form-vehicle>Nombre de véhicles dans le parc</label>
-						</div>
-						<div class="form__group-reverse form__group-half">
-							<input class=form__control id=form-carburant type=text name=carburant placeholder="" required>
-							<label class=form__label for=form-carburant>Consomation de carburant en €mois</label>
-						</div>
-					</fieldset>
+						<fieldset class=form__group-half-outer>
+							<div class="form__group-reverse form__group-half">
+								<input class=form__control id=form-vehicle type=text name=vehicle placeholder="" required>
+								<label class=form__label for=form-vehicle>Nombre de véhicles dans le parc</label>
+							</div>
+							<div class="form__group-reverse form__group-half">
+								<input class=form__control id=form-carburant type=text name=carburant placeholder="" required>
+								<label class=form__label for=form-carburant>Consomation de carburant en €mois</label>
+							</div>
+						</fieldset>
 
-					<fieldset class=form__group-half-outer>
-						<div class="form__group-reverse form__group-half">
-							<input type=tel class=form__control id=form-phone name=phone required maxlength=40 autocomplete=tel placeholder="">
-							<label class=form__label for=form-phone>Votre Téléphone<sup>*</sup></label>
-						</div>
-						<div class="form__group-reverse form__group-half form__group-radio">
-							<label class=form__radio>
-								<input type=radio name=accept required>
-								<span class="checkmark"></span>
-							</label>
-							<span>J’accepte la politique de protection des données personnelles</span>
-						</div>
-					</fieldset>
+						<fieldset class=form__group-half-outer>
+							<div class="form__group-reverse form__group-half">
+								<input type=tel class=form__control id=form-phone name=phone required maxlength=40 autocomplete=tel placeholder="">
+								<label class=form__label for=form-phone>Votre Téléphone<sup>*</sup></label>
+							</div>
+							<div class="form__group-reverse form__group-half form__group-radio">
+								<label class=form__radio>
+									<input type=radio name=accept required>
+									<span class="checkmark"></span>
+								</label>
+								<span>J’accepte la politique de protection <br>des données personnelles</span>
+							</div>
+						</fieldset>
 
-					<input class="btn" type=submit value="Me Recontacter">
-				</form>
+						<input class="btn" type=submit value="Me Recontacter">
+					</form>
+				</div>
 			</div>
-<!--			</div>-->
 
 			<div class="container icon-block">
 				<ul class>

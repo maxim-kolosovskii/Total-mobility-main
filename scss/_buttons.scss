@@ -1,0 +1,144 @@
+/*
+Buttons
+*/
+
+.btn,
+button {
+  background: $color-red;
+  border: 0 none;
+  border-radius: var(--xl);
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: block;
+  font-weight: $font-weight-bold;
+  line-height: 1.3;
+  outline: none;
+  margin: 0 auto;
+  min-height: 52px;
+  position: relative;
+  text-align: center;
+  text-transform: uppercase;
+  width: 100%;
+  transition: all $transition-duration-fast $transition-timing-function;
+
+  //@media only screen and (min-width: 300px) {
+  //  white-space: nowrap;
+  //}
+
+  @include media-phone-mx {
+    font-size: 1.125rem; //18px;
+    padding: 9px;
+    max-width: 100%;
+  }
+  @include media-phone-mn {
+    font-size: 1.25rem; //20px;
+    max-width: max-content;
+    padding: 11px 45px;
+  }
+
+  &:hover {
+    border: 0 none;
+    -webkit-box-shadow: 0 0 10px 8px rgba(29,29,27,.15);
+    box-shadow: 0 0 10px 8px rgba(29,29,27,.15);
+    color: #fff;
+    text-decoration: none;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  & span::selection,
+  &::selection {
+    background: #fff;
+    color: $color-red;
+  }
+
+  &.btn--primary {
+    background: $color-green-light; /* fallback for old browsers */
+    background: -webkit-linear-gradient(274.65deg, #03868C 9.93%, #025E62 96.32%); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(274.65deg, #03868C 9.93%, #025E62 96.32%); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    mix-blend-mode: normal;
+    box-shadow: 0 4px 40px rgba(35, 59, 104, 0.2);
+
+    &:after {
+      content: '';
+      background: -webkit-linear-gradient(274.65deg, #025E62 9.93%, #03868C 96.32%); /* Chrome 10-25, Safari 5.1-6 */
+      background: linear-gradient(274.65deg, #025E62 9.93%, #03868C 96.32%); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+      border-radius: var(--bdrs);
+      position: absolute;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      opacity: 0;
+      transition: all $transition-duration-fast $transition-timing-function;
+    }
+
+    span {
+      position: relative;
+      z-index: 1;
+    }
+
+    &:hover {
+      box-shadow: none;
+
+      &:after {
+        opacity: 1;
+      }
+    }
+
+    @include media-phone-mx {
+      font-size: 1.188rem; //19px;
+    }
+    @include media-phone-mn {
+      font-size: 1.313rem; //21px;
+    }
+  }
+
+  &.btn--empty {
+    background-color: $color-green-light;
+    display: flex;
+    max-width: 226px;
+
+    &:hover {
+      background-color: $color-green-white;
+    }
+  }
+
+  &.btn-success:hover {
+    background-color: $color-red;
+  }
+}
+
+#btn-top {
+  background-color: #fff;
+  border: 3px solid #2a6df6;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 45px;
+  height: 45px;
+  position: fixed;
+  bottom: 3vh;
+  right: 2vw;
+  z-index: 1000;
+  transition: all $transition-duration-fast $transition-timing-function;
+
+  &:after {
+    content: "\f077";
+    color: #2a6df6;
+    font: 1em/45px FontAwesome;
+  }
+
+  &:hover {
+    background-color: #2a6df6;
+
+    &:after {
+      color: #fff;
+    }
+  }
+}

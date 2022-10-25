@@ -1,0 +1,253 @@
+/*
+Form elements
+*/
+
+.form {
+  transition: all $transition-duration-fast $transition-timing-function;
+
+  @include media-phablet-mx {
+    margin: 0 auto;
+  }
+  //@include media-phablet-mn {
+    //max-width: 40vw;
+  //}
+  @include media-netbook-mn {
+    //max-width: 50vw;
+  }
+  @include media-laptop-mn {
+    max-width: 560px;
+  }
+}
+
+fieldset {
+  border: 0;
+  float: none;
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  top: auto; left: auto;
+  width: 100%;
+}
+
+.form__group-reverse {
+  flex-direction: column-reverse;
+}
+
+.form__group-half-outer {
+  @include media-phone-mx {
+    display: inline-block;
+  }
+  //@include media-phablet-netbook {
+  //  display: inline-block;
+  //}
+}
+
+.form__group-half {
+  display: flex;
+
+  @include media-phone-phablet {
+    width: calc(50% - 3px);
+  }
+  //@include media-netbook-mn {
+  @include media-phablet-mn {
+    width: calc(50% - 6px);
+  }
+}
+
+.form__group-select {
+
+  .form__control {
+    background: url("../img/i-arrow-min.svg") 95% 50% no-repeat;
+  }
+}
+
+.form__label {
+  color: #2d2d2d;
+  font-family: $font-family-accent;
+  font-size: 0.875rem; //14px
+  font-weight: $font-weight-base;
+  transform-origin: left top;
+  cursor: text;
+  transition: all $transition-duration-fast $transition-timing-function;
+
+  @include media-phablet-mx {
+    padding-right: .5rem;
+    padding-left: .5rem;
+    transform: translateY(2.2rem);
+  }
+  @include media-phablet-mn {
+    padding-right: 1rem;
+    padding-left: 1rem;
+    transform: translateY(1.95rem);
+  }
+}
+
+.form__group input,
+.form__control,
+textarea {
+  background: #fff;
+  border: 1px solid #dfdfdf;
+  border-radius: var(--bdrs);
+  box-sizing: border-box;
+  color: #2d2d2d;
+  display: block;
+  font-family: $font-family-accent;
+  font-size: 0.875rem; //14px
+  font-weight: $font-weight-medium;
+  outline: none;
+  padding: 1.3rem 1rem .4rem;
+  width: 100%;
+
+  &:focus,
+  &:not(:placeholder-shown) {
+    box-shadow: none;
+    outline: none;
+  }
+
+  &:focus {
+    color: $color-black;
+  }
+}
+
+.form__control:focus ~ .form__label,
+.form__control:not(:placeholder-shown) ~ .form__label {
+  color: #8e8e8e;
+  padding-left: 1.5rem;
+  transform: translateY(1.6rem) scale(0.7);
+}
+
+
+/* Checkbox */
+.form__checkbox {
+  display: flex;
+  align-items: start;
+  margin: 9px 0 0;
+
+  span {
+    color: #668496;
+    font-size: 0.598rem; //9.57px;
+  }
+
+  a {
+    color: $color-green;
+    text-decoration: underline;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+input[type="checkbox"] {
+  max-width: 20px;
+  margin: 0 10px 0 0;
+}
+
+
+/* Custom Radiobox */
+.form__group-radio {
+  display: flex;
+  align-items: start;
+  flex-direction: row;
+  margin: 15px 0 0;
+
+  & > span {
+    color: #545252;
+    //font-size: 0.938rem; //15px;
+    font-size: 0.875rem; //14px;
+  }
+}
+.form__radio {
+  cursor: pointer;
+  display: block;
+  margin-top: 4px;
+  padding-left: 37px;
+  position: relative;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+  .checkmark {
+    background-color: #f5f5f5;
+    border: 1px solid #01A2FF;
+    width: 23px;
+    height: 23px;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    /* Create the indicator (the dot/circle - hidden when not checked) */
+    &:after {
+      content: "";
+      position: absolute;
+      display: none;
+      top: 6px;
+      left: 6px;
+      width: 9px;
+      height: 9px;
+      background: #fff;
+      border-radius: 50%;
+    }
+  }
+  /* On mouse-over, add a grey background color */
+  &:hover input ~ .checkmark {
+    background-color: #eee;
+  }
+  /* When the radio button is checked, add a blue background */
+  & input:checked ~ .checkmark {
+    background-color: #01A2FF;
+
+    /* Show the indicator (dot/circle) when checked */
+    &:after {
+      display: block;
+    }
+  }
+}
+
+input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+
+/* Loader */
+.formulario .shader {
+  position: relative;
+}
+.loader_inner {
+  display: none;
+}
+.loader_inner.view {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+}
+.loader {
+  background: url(../img/loader.svg) no-repeat;
+  display: block;
+  margin: auto;
+  height: 98px;
+  width: 98px;
+}
+#main-form {
+  opacity: 1;
+  transition: all 0.25s linear;
+}
+.loader_inner.view + #main-form {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+
+/* Select */
+//@import "select";

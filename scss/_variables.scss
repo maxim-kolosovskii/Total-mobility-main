@@ -1,0 +1,222 @@
+// VARIABLES
+
+// CSS animations
+$transition-duration: 0.3s;
+$transition-duration-fast: 0.15s;
+$transition-duration-slow: 0.6s;
+$transition-timing-function: cubic-bezier(0.25, 0.45, 0.45, 0.95);
+
+// CSS colors
+$color-green-dark: #074C51;
+$color-green: #25868C;
+$color-green-light: #19B4BB;
+$color-green-white: #2CDCE5;
+//$color-grey-light: #f6f7fa;
+
+$color-red: #ff0100;
+$color-grey: #545252;
+$color-black: #000;
+
+// CSS typography
+$font-family-base: 'Quicksand', sans-serif;
+$font-family-accent: 'Roboto', sans-serif;
+//$font-weight-light: 300;
+$font-weight-base: 400;
+$font-weight-medium: 500;
+$font-weight-bolder: 700;
+
+$font-weight-semi: 600;
+$font-weight-bold: 700;
+$font-color-base: $color-black;
+
+// CSS media queries grid
+$media-small-max: 374px;
+$media-small-min: 375px;
+$media-phone-max: 575px;
+$media-phone-min: 576px;
+$media-phablet-max: 767px;
+$media-phablet-min: 768px;
+$media-tablet-v-max: 991px;
+$media-tablet-v-min: 992px;
+$media-tablet-h-max: 1023px;
+$media-tablet-h-min: 1024px;
+$media-netbook-max: 1199px;
+$media-netbook-min: 1200px;
+$media-laptop-max: 1399px;
+$media-laptop-min: 1400px;
+$media-desktop-max: 1899px;
+$media-desktop-min: 1900px;
+$media-retina-max: 2559px;
+$media-retina-min: 2560px;
+@mixin media-small-mx {
+  @media screen and (max-width: #{$media-small-max}) {
+    @content;
+  }
+}
+@mixin media-small-mn {
+  @media screen and (min-width: #{$media-small-min}) {
+    @content;
+  }
+}
+@mixin media-phone-mx {
+  @media screen and (max-width: #{$media-phone-max}) {
+    @content;
+  }
+}
+@mixin media-phone-mn {
+  @media screen and (min-width: #{$media-phone-min}) {
+    @content;
+  }
+}
+@mixin media-phablet-mx {
+  @media screen and (max-width: #{$media-phablet-max}) {
+    @content;
+  }
+}
+@mixin media-phablet-mn {
+  @media screen and (min-width: #{$media-phablet-min}) {
+    @content;
+  }
+}
+@mixin media-tablet-v-mx {
+  @media screen and (max-width: #{$media-tablet-v-max}) {
+    @content;
+  }
+}
+@mixin media-tablet-v-mx-land {
+  @media screen and (max-width: #{$media-tablet-v-max}) and (orientation : landscape) {
+    @content;
+  }
+}
+@mixin media-tablet-v-mn {
+  @media screen and (min-width: #{$media-tablet-v-min}) {
+    @content;
+  }
+}
+@mixin media-tablet-h-mx {
+  @media screen and (max-width: #{$media-tablet-h-max}) {
+    @content;
+  }
+}
+@mixin media-tablet-h-mn {
+  @media screen and (min-width: #{$media-tablet-h-min}) {
+    @content;
+  }
+}
+@mixin media-netbook-mx {
+  @media screen and (max-width: #{$media-netbook-max}) {
+    @content;
+  }
+}
+@mixin media-netbook-mn {
+  @media screen and (min-width: #{$media-netbook-min}) {
+    @content;
+  }
+}
+@mixin media-laptop-mx {
+  @media screen and (max-width: #{$media-laptop-max}) {
+    @content;
+  }
+}
+@mixin media-laptop-mn {
+  @media screen and (min-width: #{$media-laptop-min}) {
+    @content;
+  }
+}
+@mixin media-desktop-mx {
+  @media screen and (max-width: #{$media-desktop-max}) {
+    @content;
+  }
+}
+@mixin media-desktop-mn {
+  @media screen and (min-width: #{$media-desktop-min}) {
+    @content;
+  }
+}
+@mixin media-retina-mx {
+  @media screen and (max-width: #{$media-retina-max}) {
+    @content;
+  }
+}
+@mixin media-retina-mn {
+  @media screen and (min-width: #{$media-retina-min}) {
+    @content;
+  }
+}
+@mixin media-340-phone {
+  @media screen and (min-width: 340px) and (max-width: #{$media-phone-max}) {
+    @content;
+  }
+}
+@mixin media-phone-phablet {
+  @media screen and (min-width: #{$media-phone-min}) and (max-width: #{$media-phablet-max}) {
+    @content;
+  }
+}
+@mixin media-phone-laptop {
+  @media screen and (min-width: #{$media-phone-min}) and (max-width: #{$media-laptop-max}) {
+    @content;
+  }
+}
+@mixin media-phone-tablet-v {
+  @media screen and (min-width: #{$media-phone-min}) and (max-width: #{$media-tablet-v-max}) {
+    @content;
+  }
+}
+@mixin media-phablet-tablet-v {
+  @media screen and (min-width: #{$media-phablet-min}) and (max-width: #{$media-tablet-v-max}) {
+    @content;
+  }
+}
+@mixin media-phablet-tablet-h {
+  @media screen and (min-width: #{$media-phablet-min}) and (max-width: #{$media-tablet-h-max}) {
+    @content;
+  }
+}
+@mixin media-phablet-netbook {
+  @media screen and (min-width: #{$media-phablet-min}) and (max-width: #{$media-netbook-max}) {
+    @content;
+  }
+}
+@mixin media-phablet-laptop {
+  @media screen and (min-width: #{$media-phablet-min}) and (max-width: #{$media-laptop-max}) {
+    @content;
+  }
+}
+@mixin media-netbook-laptop {
+  @media screen and (min-width: #{$media-netbook-min}) and (max-width: #{$media-laptop-max}) {
+    @content;
+  }
+}
+
+/*
+CSS root variables media
+*/
+@include media-netbook-mx {
+  :root {
+    --bdrs: 3px;
+    --sm: 5px;
+    --md: 12px;
+    --lg: 20px;
+    --xl: 55px;
+  }
+}
+@include media-netbook-mn {
+  :root {
+    --bdrs: 5px;
+    --sm: 8px;
+    --md: 15px;
+    --lg: 30px;
+    --xl: 72px;
+  }
+}
+@include media-tablet-v-mx {
+  :root {
+    --font-size-base: 16px;
+  }
+}
+@include media-tablet-v-mn {
+  :root {
+    --font-size-base: 16px;
+  }
+}

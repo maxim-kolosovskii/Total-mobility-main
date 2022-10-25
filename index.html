@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang=fr>
+
+<head>
+	<meta charset=UTF-8>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Total Mobility</title>
+	<meta name=description content="Page d'accueil de Total Mobility">
+	<meta name=viewport content="width=device-width, initial-scale=1">
+	<meta name=msapplication-TileColor content=#4632ff>
+	<link rel=profile href=http://microformats.org/profile/hcard>
+
+	<!-- Favicon -->
+	<link rel=apple-touch-icon sizes=180x180 href=favicon/apple-touch-icon.png>
+	<link rel=icon type=image/png sizes=32x32 href=favicon/favicon-32x32.png>
+	<link rel=icon type=image/png sizes=16x16 href=favicon/favicon-16x16.png>
+	<link rel=mask-icon href=favicon/safari-pinned-tab.svg color=#da532c>
+	<link rel=manifest href=site.webmanifest>
+	<meta name=msapplication-TileColor content=#da532c>
+	<meta name=theme-color content=#ffffff>
+	<!-- Fonts -->
+	<link rel=preconnect href=https://fonts.googleapis.com>
+	<link rel=preconnect href=https://fonts.gstatic.com" crossorigin>
+	<link href=https://fonts.googleapis.com/css2?family=Quicksand:wght@600;700&family=Roboto&display=swap rel=stylesheet>
+	<link href=https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css rel=stylesheet integrity=sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1 crossorigin=anonymous>
+	<link rel=stylesheet href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+	<!-- CSS styles -->
+	<link rel=stylesheet href=css/normalize.css>
+	<link rel=stylesheet href=css/style.css>
+	<link rel=stylesheet href=css/p-index.css>
+</head>
+
+<body>
+<header class=header>
+	<img class="logo logo--conseils" src=img/logo-conseils-conso-min.svg alt="Conseils Conso">
+	<p>Partenaire de</p>
+	<img class="logo logo--totalenergies" src=img/logo-totalenergies-min.png alt=TotalEnergies>
+	<div class=header-shadow>&nbsp;</div>
+</header>
+
+<main class=main>
+	<article>
+		<section class="section section--top">
+			<div class="container content-box">
+				<div class=content-left>
+					<a href="#">
+						<picture>
+							<source srcset=img/top-img-min.jpg media="(min-width: 500px)">
+							<img src=img/top-img-m-min.jpg alt="Découvrir les avantages de la carte">
+						</picture>
+					</a>
+				</div>
+			</div>
+
+<!--			<div class=container>-->
+			<div class="container content-right">
+				<h1 class=page-title>Votre demande de devis en moins d’une minute</h1>
+				<form method=post id=main-form class=form>
+					<fieldset class=form__group-half-outer>
+						<div class="form__group-reverse form__group-half">
+							<input class=form__control id=form-nom type=text name=lastname placeholder="" required>
+							<label class=form__label for=form-nom>Votre nom<sup>*</sup></label>
+						</div>
+						<div class="form__group-reverse form__group-half">
+							<input class=form__control id=form-prenom type=text name=firstname placeholder="" required>
+							<label class=form__label for=form-prenom>Votre prénom<sup>*</sup></label>
+						</div>
+					</fieldset>
+
+					<fieldset class=form__group-half-outer>
+						<div class="form__group-reverse form__group-half">
+							<input class=form__control id=form-corporate type=text name="corporate_name" placeholder="" required>
+							<label class=form__label for=form-corporate>Nom de l’entreprise<sup>*</sup></label>
+						</div>
+						<div class="form__group-reverse form__group-half">
+							<input class="form__control" id=form-email type=email name=email placeholder="" required>
+							<label class=form__label for=form-email>Email<sup>*</sup></label>
+						</div>
+					</fieldset>
+
+					<fieldset class=form__group-half-outer>
+						<div class="form__group-reverse form__group-half">
+							<input class=form__control id=form-zip type=text name=address_zip_code placeholder="" required>
+							<label class=form__label for=form-zip>Code postal<sup>*</sup></label>
+						</div>
+						<div class="form__group-reverse form__group-half">
+							<input class=form__control id=form-siret type=text name=siret_number placeholder="" required>
+							<label class=form__label for=form-siret>SIRET<sup>*</sup></label>
+						</div>
+					</fieldset>
+
+					<fieldset class=form__group-half-outer>
+						<div class="form__group-reverse form__group-half">
+							<input class=form__control id=form-vehicle type=text name=vehicle placeholder="" required>
+							<label class=form__label for=form-vehicle>Nombre de véhicles dans le parc</label>
+						</div>
+						<div class="form__group-reverse form__group-half">
+							<input class=form__control id=form-carburant type=text name=carburant placeholder="" required>
+							<label class=form__label for=form-carburant>Consomation de carburant en €mois</label>
+						</div>
+					</fieldset>
+
+					<fieldset class=form__group-half-outer>
+						<div class="form__group-reverse form__group-half">
+							<input type=tel class=form__control id=form-phone name=phone required maxlength=40 autocomplete=tel placeholder="">
+							<label class=form__label for=form-phone>Votre Téléphone<sup>*</sup></label>
+						</div>
+						<div class="form__group-reverse form__group-half form__group-radio">
+							<label class=form__radio>
+								<input type=radio name=accept required>
+								<span class="checkmark"></span>
+							</label>
+							<span>J’accepte la politique de protection des données personnelles</span>
+						</div>
+					</fieldset>
+
+					<input class="btn" type=submit value="Me Recontacter">
+				</form>
+			</div>
+<!--			</div>-->
+
+			<div class="container icon-block">
+				<ul class>
+					<li class="icon-block__item icon-block__item--electrique"><span></span>Recharge éléctrique</li>
+					<li class="icon-block__item icon-block__item--carburant"><span></span>Carburant</li>
+					<li class="icon-block__item icon-block__item--lavage"><span></span>Lavage</li>
+					<li class="icon-block__item icon-block__item--peage"><span></span>Péage</li>
+					<li class="icon-block__item icon-block__item--parking"><span></span>Parking</li>
+					<li class="icon-block__item icon-block__item--entretien"><span></span>Entretien</li>
+					<li class="icon-block__item icon-block__item--lubrifiant"><span></span>Lubrifiant</li>
+					<li class="icon-block__item icon-block__item--gnc"><span></span>GNC</li>
+					<li class="icon-block__item icon-block__item--boutique"><span></span>Boutique</li>
+				</ul>
+			</div>
+
+			<div class="section-bg section-bg--gauche">&nbsp;</div>
+		</section><!-- end top section -->
+
+		<section class="section section--carte">
+			<div class=container>
+			<h1 class=section__title>La carte carburant professionnelle, un outil de gestion puissant</h1>
+			<p class=section__txt>La carte carburant permet de tracer précisément les transactions d’essence, de gazole ou de GPL par les collaborateurs, en définissant des lieux d’achat spécifiques (enseignes, zone géographique…).</p>
+			<h2 class=section__subtitle>Ses avantages sont <span class="nowrap">multiples :</span></h2>
+				<p class="carte carte--surve">Suivre la consommation de chaque véhicule et de chaque conducteur</p>
+				<p class="carte carte--securiser">Sécuriser les transactions de carburant</p>
+				<p class="carte carte--eviter">Éviter les fraudes en limitant les usages possibles (jours et heures, plafonnement du montant ou du volume de carburant…)</p>
+				<p class="carte carte--simplifier">Simplifier la gestion administrative au niveau des services RH, achats et comptabilité, puisque le collaborateur n’a plus besoin de se faire rembourser en réalisant des notes de frais.</p>
+				<p class="carte carte--aujourd">Aujourd’hui, les cartes carburant sont de véritables passeports multi-services.</p>
+				<p class="carte carte--lavages">Accès aux stations de lavages</p>
+				<p class="carte carte--services">Accès aux stations-services</p>
+				<p class="carte carte--parking">Accès aux parkings et péages</p>
+				<a class="btn" href="#" target=_blank>J’en profite maintenant</a>
+			</div>
+			<div class="section-bg section-bg--droit">&nbsp;</div>
+		</section><!-- end carte section -->
+
+		<section class="section section--mobility">
+			<h1 class=section__title>La carte mobility vous donne <br>accès <span class=nowrap>en France à :</span></h1>
+			<div class="section-bg section-bg--droit">&nbsp;</div>
+			<div class=container>
+				<div class=mobility>
+					<div class="mobility-item mobility-item--millions">
+						<img src=img/bg-mobility-millions-cartes-min.png alt="">
+						<h2>2,1</h2>
+						<p>millions de cartes Fleet en circulation</p>
+					</div>
+					<div class="mobility-item mobility-item--">
+						<img src=img/bg-mobility-stations-min.png alt="">
+						<h2>3 500</h2>
+						<p>stations-services et partenaires</p>
+					</div>
+					<div class="mobility-item mobility-item--">
+						<img src=img/bg-mobility-electrique-min.png alt="">
+						<h2>+60 000</h2>
+						<p>bornes de recharge électrique</p>
+					</div>
+					<div class="mobility-item mobility-item--">
+						<img src=img/bg-mobility-parkings-min.png alt="">
+						<h2>+1 500</h2>
+						<p>parkings </p>
+					</div>
+					<div class="mobility-item mobility-item--">
+						<img src=img/bg-mobility-lavage-min.png alt="">
+						<h2>1 500</h2>
+						<p>station de lavage</p>
+					</div>
+					<div class="mobility-item mobility-item--">
+						<img src=img/bg-mobility-peages-min.png alt="">
+						<h2>tous</h2>
+						<p>les péages</p>
+					</div>
+				</div>
+				<h3>
+					<span class=prime>Mais <span class=nowrap>aussi à :</span></span>
+					<span class=deux>notre réseau de partenaires</span>
+				</h3>
+				<p>dont Carglass© ry Norauto pour effectuer l’entretien de vos véhicules et remplacer votre pare-brise</p>
+			</div>
+		</section><!-- end mobility section -->
+
+		<section class="section section--vous">
+			<div class=container>
+				<div class=vous-top>
+					<div class=vous-left>
+						<h1 class=section__title>Vous disposez d’un ou plusieurs <span class=nowrap>véhicules ?</span></h1>
+						<p>Simplifiez la gestion de vos frais pour vos véhicules professionnels avec l'aide d'un seul support pour toutes vos transactions dans le réseau de stations-service de TotalEnergies et ses partenaires.</p>
+					</div>
+					<div class=vous-right>
+						<picture class=bg-droit>
+							<source srcset=img/bg-vous-min.jpg media="(min-width: 500px)">
+							<img src=img/bg-vous-m-min.jpg alt="Stations-service de TotalEnergies">
+						</picture>
+					</div>
+				</div>
+
+				<div class=pour-outer>
+					<div class="pour pour--vous">
+						<h2>Pour <span class=nowrap>vous :</span></h2>
+						<ul>
+							<li>Une carte sécurisée et paramétrable</li>
+							<li>Une facture unique détaillée</li>
+							<li>La fin de la gestion des notes de frais</li>
+							<li>La récupération de la TVA simplifiée</li>
+							<li>L’accès à un outil de gestion dédié</li>
+						</ul>
+					</div>
+					<div class="pour pour--salaries">
+						<h2>Pour vos salariés/ <span class=nowrap>collaborateurs :</span></h2>
+						<ul>
+							<li>Pas d’avance de frais</li>
+							<li>Gain de temps lors de leurs déplacements</li>
+							<li>Proximité grâce au réseau TotalEnergies et partenaires</li>
+						</ul>
+					</div>
+				</div>
+
+				<a class=btn href="#" target=_blank>Souscrir <span class=nowrap>à la carte</span> Mobility</a>
+			</div>
+		</section><!-- end vous section -->
+	</article>
+</main>
+
+<footer class=footer>
+	<header class=header>
+		<img class="logo logo--conseils" src=img/logo-conseils-conso-min.svg alt="Conseils Conso">
+		<img class="logo logo--totalenergies" src=img/logo-totalenergies-min.png alt=TotalEnergies>
+	</header>
+
+	<div class=container>
+		<div class=content-box>
+			<p>Carte Mobility Corporate de TotalEnergies émise par la Caisse fédérale de Crédit Mutuel (Société coopérative à forme S.A. au capital de 5 458 531 008€ inscrite au RCS Strasbourg B 588 505 354, 4, rue Frédéric-
+				Guillaume Raiffeisen 67906 Strasbourg Cedex 9 – Banque régie par les articles L.511-1 et suivants du Code Monétaire et Financier) et commercialisée par TotalEnergies Marketing France (SAS au capital de 390 553
+				839€ - 531 680 445 RCS Nanterre – 562 avenue du Parc de L’Ile – 92000 Nanterre) ; en qualité d’agent de prestataire de service de paiement mandaté par la CFdeCM.</p>
+
+			<p>Les données à caractère personnel collectées sur la présente page font l'objet d'un traitement destiné à la gestion de votre demande, dont le responsable de traitement est la société TOTALENERGIES MARKETING FRANCE. Elles sont utilisées pour vous recontacter, vous fournir les informations demandées et vous envoyer des communications commerciales. La base juridique du traitement est votre consentement que vous pouvez retirer à tout moment, sans que cela ne remette en cause les traitements antérieurs.<br>
+				Les données à caractère personnel sont réservées à l'usage de TOTALENERGIES MARKETING FRANCE et ne pourront être transmises qu'à des prestataires intervenant dans la gestion de votre demande.<br>
+				Les données à caractère personnel sont conservées pendant la durée nécessaire à la finalité du traitement, à savoir tant que le contact demeure actif. Dans le cas où ce dernier deviendrait inactif, les données viendraient à être supprimées au plus tard dans un délai de 3 années pour une demande d'information ou 5 années pour une réclamation.<br>
+				Tout transfert de données vers un pays tiers hors de l'Espace Economique Européen est réalisé en conformité avec la règlementation applicable et de manière à assurer une protection adéquate des données.<br>
+				Conformément à la réglementation relative aux données à caractère personnel, toute personne physique dispose d'un droit d'accès, de rectification, d'effacement, de limitation, de portabilité, d'un droit d'opposition pour motif légitime ainsi que du droit d'établir des lignes directrices au sort de ses données personnelles après son décès.<br>
+				Ces droits doivent être exercés auprès de TOTALENERGIES MARKETING FRANCE à l'adresse email : <a href="mailto:ms.rgpd-mobility@totalenergies.com">ms.rgpd-mobility@totalenergies.com</a>. Si vous estimez, après nous avoir contactés, que vos droits " Informatique et Libertés " ne sont pas respectés, vous pouvez adresser une réclamation à la CNIL.<br>
+				Pour toute information supplémentaire sur le traitement de vos données personnelles, vous pouvez consulter la charte relative au traitement des données personnelles et la gestion des cookies : <a href="https://mobility.totalenergies.com/fr/politiques-de-confidentialite" target="_blank">https://mobility.totalenergies.com/fr/politiques-de-confidentialite</a></p>
+
+			<p>*En vous inscrivant, vous déclarez accepter la Charte pour la protection des données personnelles du présent site. Identité du responsable du traitement : DCE CONTENT PERFORMANCE SL ayant son siège au Av Diagonalnum.536 P.pr 08006 - Barcelona. Les données personnelles collectées sont transmises aux annonceurs que vous avez sélectionnées afin d'être recontacté dans le cadre de la demande réalisée à votre initiative. Conformément au règlement n°2016/679, dit règlement général sur la protection des données (RGPD), vous disposez d'un droit d'accès, de rectification, d'opposition, de suppression et de portabilité des informations vous concernant ainsi qu'un droit à la limitation de leur traitement. Vous pouvez exercer ce droit sur simple demande écrite adressée à : DCE CONTENT PERFORMANCE SL Av Diagonalnum.536 P.pr 08006 - Barcelona.</p>
+		</div>
+	</div>
+</footer>
+
+<div id="myModal" class="modal fade">
+	<div class="modal-dialog modal-confirm">
+		<div class="modal-content">
+			<div class="modal-body">
+				<p class="text-center">Merci, nous avons bien reçu votre demande. Un conseiller TotalEnergies va vous recontacter.</p>
+			</div>
+			<div class="modal-footer">
+				<button class="btn btn-success btn-block" data-dismiss="modal">OK</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<a id="btn-top" href="#"></a>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<script src="owl.carousel.min.js"></script>
+<script src="chosen.jquery.min.js"></script>
+<script>
+	$(document).ready(function() {
+		$(".owl").owlCarousel({
+
+			items : 4,
+			loop:true,
+			autoplay: true,
+			nav: true,
+			dots: false,
+			responsiveClass:true,
+			responsive:{
+
+				0:{
+					items:1,
+					nav:true
+				},
+
+				600:{
+					items:2,
+					nav:false
+				},
+
+				1000:{
+					items:3,
+					nav:true,
+					loop:false
+				},
+
+				1400:{
+					items:4,
+					nav:true,
+					loop:false
+				}
+
+			}
+
+		});
+
+		$(".owl-one").owlCarousel({
+			items : 1,
+			margin:10,
+			autoHeight:true,
+			loop:true,
+			nav: true,
+			dots: false
+		});
+
+		/*$('#main-form').on('submit',function () {
+			var formData = $('#main-form').serialize();
+			$('.loader_inner').addClass('view');
+			$("#myModal .text-center").html('');
+			$.post("./form.php",
+					formData
+					,function(r){
+						//console.log(r);
+						$('.loader_inner').removeClass('view');
+						$('#main-form').trigger("reset");
+						$('#address_city').val('');
+
+						$("#address_zip_code").html('<option value="" disabled selected>Code Postal*</option>');
+						$("#address_zip_code").prop('disabled',true);
+						$("#address_zip_code").trigger("chosen:updated");
+
+						$("#myModal .text-center").html(r);
+						$('#myModal').modal('show');
+					}).fail(function(e) {
+
+				//console.log(e);
+				$('.loader_inner').removeClass('view');
+				$("#myModal .text-center").html(e.responseText);
+				$('#myModal').modal('show');
+			});
+
+			return false;
+		});*/
+
+		// Hold request
+		var request;
+		$('#main-form').on('submit', function(event) {
+			event.preventDefault();
+
+			// Abort any pending request
+			if (request) {
+				request.abort();
+			}
+
+			$('.loader_inner').addClass('view');
+			$("#myModal .text-center").html('');
+
+			var $form = $(this);
+			var $inputs = $form.find("input, select, button, textarea");
+			var serializedData = $form.serialize();
+
+			$inputs.prop("disabled", true);
+
+			request = $.ajax({
+				url: "./form.php",
+				type: "post",
+				data: serializedData
+			});
+
+			request.done(function (response, textStatus, jqXHR) {
+				$('.loader_inner').removeClass('view');
+				$('#main-form').trigger("reset");
+				$('#address_city').val('');
+
+				let $addressZipCode = $("#address_zip_code");
+				$addressZipCode.html('<option value="" disabled selected>Code Postal*</option>');
+				$addressZipCode.prop('disabled', true);
+				$addressZipCode.trigger("chosen:updated");
+
+				$("#myModal .text-center").html(response);
+				$('#myModal').modal('show');
+			});
+
+			request.fail(function (jqXHR, textStatus, errorThrown) {
+				$('.loader_inner').removeClass('view');
+				$("#myModal .text-center").html(jqXHR.responseText);
+				$('#myModal').modal('show');
+			});
+
+			request.always(function () {
+				$inputs.prop("disabled", false);
+			});
+		});
+
+		// $('#address_city').keyup(function () {
+		// 	$("#address_zip_code").html('<option value="" disabled selected>Code Postal*</option>');
+		// 	$("#address_zip_code").prop('disabled',true);
+		// 	$("#address_zip_code").trigger("chosen:updated");
+		// });
+
+		$('#address_city').autocomplete({
+			source: './address_search.php',
+			autoFocus: true,
+			minLength:2,
+			delay:500,
+			highlightClass: "highlight-autocomplete",
+
+			search: function(event, ui) {
+				$('.spinner').show();
+			},
+
+			response: function(event, ui) {
+				$('.spinner').hide();
+			},
+
+			select: function (event, ui) {
+				$.post("./zip_search.php",{
+							city:ui.item.value
+						},
+
+						function(a){
+							//console.log(a);
+							var options = '<option value="" disabled selected>Code Postal*</option>';
+							a.forEach(element => options += '<option>' + element + '</option>');
+							$("#address_zip_code").prop('disabled',false);
+							$("#address_zip_code").html(options);
+							$("#address_zip_code").trigger("chosen:updated");
+						});
+			}
+		});
+
+		$('.chosen').chosen();
+
+		<!-- Scroll Effect -->
+//        $('a[href*="#"]').on('click', function() {
+//            $('html, body').animate({
+//                scrollTop: $($.attr(this, 'href')).offset().top
+//            }, 1400);
+//            return false;
+//        });
+
+	});
+</script>
+</body>
+</html>

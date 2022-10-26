@@ -11,7 +11,6 @@
 	<link rel=profile href=http://microformats.org/profile/hcard>
 
 	<!-- Favicon -->
-<!--	<link rel=icon href=favicon/favicon.png type=image/png>-->
 	<link rel=apple-touch-icon sizes=180x180 href=favicon/apple-touch-icon.png>
 	<link rel=icon type=image/png sizes=32x32 href=favicon/favicon-32x32.png>
 	<link rel=icon type=image/png sizes=16x16 href=favicon/favicon-16x16.png>
@@ -45,12 +44,12 @@
 		<section class="section section--top">
 			<div class="container content-box">
 				<div class=content-left>
-					<a href="#">
-						<picture>
-							<source srcset=img/top-img-min.jpg media="(min-width: 500px)">
-							<img id="videoPlaceholder" src=img/top-img-m-min.jpg alt="Découvrir les avantages de la carte">
-						</picture>
-					</a>
+					<button class="video-controls" onclick="playPause()"></button>
+
+					<video id=video1 class=video preload=auto poster=img/top-img-min.jpg onended="theEnd()">
+						<source src="./video/motion_total-mobility_v1-6-compress-604x604.mp4" type=video/mp4>
+						<source src="./video/motion_total-mobility_v1-6-compress-604x604.webm" type=video/webm>
+					</video>
 				</div>
 			</div>
 
@@ -282,85 +281,47 @@
 
 <a id="btn-top" href="#"></a>
 
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
-<script src="owl.carousel.min.js"></script>
-<script src="chosen.jquery.min.js"></script>
+<script src=https://code.jquery.com/jquery-3.6.0.min.js></script>
+<script src=https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js></script>
 <script>
 	$(document).ready(function() {
-		$(".owl").owlCarousel({
+		// $(".owl").owlCarousel({
+		// 	items : 4,
+		// 	loop:true,
+		// 	autoplay: true,
+		// 	nav: true,
+		// 	dots: false,
+		// 	responsiveClass:true,
+		// 	responsive:{
+		// 		0:{
+		// 			items:1,
+		// 			nav:true
+		// 		},
+		// 		600:{
+		// 			items:2,
+		// 			nav:false
+		// 		},
+		// 		1000:{
+		// 			items:3,
+		// 			nav:true,
+		// 			loop:false
+		// 		},
+		// 		1400:{
+		// 			items:4,
+		// 			nav:true,
+		// 			loop:false
+		// 		}
+		// 	}
+		// });
 
-			items : 4,
-			loop:true,
-			autoplay: true,
-			nav: true,
-			dots: false,
-			responsiveClass:true,
-			responsive:{
-
-				0:{
-					items:1,
-					nav:true
-				},
-
-				600:{
-					items:2,
-					nav:false
-				},
-
-				1000:{
-					items:3,
-					nav:true,
-					loop:false
-				},
-
-				1400:{
-					items:4,
-					nav:true,
-					loop:false
-				}
-
-			}
-
-		});
-
-		$(".owl-one").owlCarousel({
-			items : 1,
-			margin:10,
-			autoHeight:true,
-			loop:true,
-			nav: true,
-			dots: false
-		});
-
-		/*$('#main-form').on('submit',function () {
-			var formData = $('#main-form').serialize();
-			$('.loader_inner').addClass('view');
-			$("#myModal .text-center").html('');
-			$.post("./form.php",
-					formData
-					,function(r){
-						//console.log(r);
-						$('.loader_inner').removeClass('view');
-						$('#main-form').trigger("reset");
-						$('#address_city').val('');
-
-						$("#address_zip_code").html('<option value="" disabled selected>Code Postal*</option>');
-						$("#address_zip_code").prop('disabled',true);
-						$("#address_zip_code").trigger("chosen:updated");
-
-						$("#myModal .text-center").html(r);
-						$('#myModal').modal('show');
-					}).fail(function(e) {
-
-				//console.log(e);
-				$('.loader_inner').removeClass('view');
-				$("#myModal .text-center").html(e.responseText);
-				$('#myModal').modal('show');
-			});
-
-			return false;
-		});*/
+		// $(".owl-one").owlCarousel({
+		// 	items : 1,
+		// 	margin:10,
+		// 	autoHeight:true,
+		// 	loop:true,
+		// 	nav: true,
+		// 	dots: false
+		// });
 
 		// Hold request
 		var request;
@@ -412,54 +373,52 @@
 			});
 		});
 
-		// $('#address_city').keyup(function () {
-		// 	$("#address_zip_code").html('<option value="" disabled selected>Code Postal*</option>');
-		// 	$("#address_zip_code").prop('disabled',true);
-		// 	$("#address_zip_code").trigger("chosen:updated");
+
+		// $('#address_city').autocomplete({
+		// 	source: './address_search.php',
+		// 	autoFocus: true,
+		// 	minLength:2,
+		// 	delay:500,
+		// 	highlightClass: "highlight-autocomplete",
+		//
+		// 	search: function(event, ui) {
+		// 		$('.spinner').show();
+		// 	},
+		//
+		// 	response: function(event, ui) {
+		// 		$('.spinner').hide();
+		// 	},
+		//
+		// 	select: function (event, ui) {
+		// 		$.post("./zip_search.php",{
+		// 					city:ui.item.value
+		// 				},
+		//
+		// 				function(a){
+		// 					//console.log(a);
+		// 					var options = '<option value="" disabled selected>Code Postal*</option>';
+		// 					a.forEach(element => options += '<option>' + element + '</option>');
+		// 					$("#address_zip_code").prop('disabled',false);
+		// 					$("#address_zip_code").html(options);
+		// 					$("#address_zip_code").trigger("chosen:updated");
+		// 				});
+		// 	}
 		// });
 
-		$('#address_city').autocomplete({
-			source: './address_search.php',
-			autoFocus: true,
-			minLength:2,
-			delay:500,
-			highlightClass: "highlight-autocomplete",
-
-			search: function(event, ui) {
-				$('.spinner').show();
-			},
-
-			response: function(event, ui) {
-				$('.spinner').hide();
-			},
-
-			select: function (event, ui) {
-				$.post("./zip_search.php",{
-							city:ui.item.value
-						},
-
-						function(a){
-							//console.log(a);
-							var options = '<option value="" disabled selected>Code Postal*</option>';
-							a.forEach(element => options += '<option>' + element + '</option>');
-							$("#address_zip_code").prop('disabled',false);
-							$("#address_zip_code").html(options);
-							$("#address_zip_code").trigger("chosen:updated");
-						});
-			}
-		});
-
-		$('.chosen').chosen();
-
-		<!-- Scroll Effect -->
-//        $('a[href*="#"]').on('click', function() {
-//            $('html, body').animate({
-//                scrollTop: $($.attr(this, 'href')).offset().top
-//            }, 1400);
-//            return false;
-//        });
-
+		// $('.chosen').chosen();
 	});
+</script>
+
+<!-- Video Player -->
+<script>
+	var myVideo = document.getElementById("video1");
+
+	function playPause() {
+		if (myVideo.paused)
+			myVideo.play();
+		else
+			myVideo.pause();
+	}
 </script>
 </body>
 </html>

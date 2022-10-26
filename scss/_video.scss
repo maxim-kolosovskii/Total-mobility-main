@@ -3,13 +3,20 @@
   box-shadow: none;
   border-radius: 0;
   border: 0 none;
-  max-width: none;
+  margin: 0 auto;
   position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
   z-index: 1;
+
+  @include media-netbook-mx {
+    max-width: 604px;
+  }
+  @include media-netbook-mn {
+    max-width: none;
+  }
 
   &:hover {
     border: 0 none;
@@ -24,5 +31,15 @@
 }
 .video {
   display: block;
-  max-width: 100%;
+  margin: 0 auto;
+
+  @include media-phablet-netbook {
+    max-width: 604px;
+  }
+  @include media-phablet-mx {
+    max-width: 100%;
+  }
+  @include media-netbook-mn {
+    max-width: 100%;
+  }
 }
